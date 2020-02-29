@@ -8,16 +8,20 @@ namespace LetterLoops
         {
             Console.WriteLine("Please type a string of letters.");
             var userEntry = Console.ReadLine();
-            int count = 0;
-            foreach (char letter in userEntry)
+            var letterCount = userEntry.Length;
+            for (int i=0; i < userEntry.Length; i++)
             {
-            count++;
+                //Console.WriteLine(userEntry[i]);
+                //index(is i) + 1 times, 
+                for(var j = 0; j < i + 1; j++)
+                {
+                    Console.WriteLine(userEntry[i]);
+                }
             }
-            Console.WriteLine(count);
-            count = 0;
+            
 
 
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
